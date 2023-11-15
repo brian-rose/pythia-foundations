@@ -135,6 +135,13 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
   </li>
   
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/blog.html">Blog</a>
+  </li>
+  
   
 </ul>
       </div>
@@ -196,6 +203,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../preamble/how-to-use.html">
    How to Use This Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-cite.html">
+   How to Cite This Book
   </a>
  </li>
 </ul>
@@ -622,7 +634,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/data-formats/netcdf-cf.ipynb"><button type="button"
+        <a class="binder-button" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/data-formats/netcdf-cf.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -823,6 +835,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3639/2342439358.py:1: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  start = datetime.utcnow().replace(hour=22, minute=0, second=0, microsecond=0)
+</pre></div>
+</div>
+</div>
 </div>
 <p>In addition to dimensional arrays, we also need a variable of interest, which holds the data values at each unique dimensional index. In these examples, this variable is called <code class="docutils literal notranslate"><span class="pre">temps</span></code>, and holds temperature data. Note that the dimensions correspond to the ones we just created above.</p>
 <div class="cell docutils container">
@@ -863,6 +881,12 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3639/2008125275.py:5: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  nc.history = str(datetime.utcnow()) + &#39; Python&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>This next example shows a plain-text representation of our netCDF file as it exists currently:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">netcdf</span> <span class="n">forecast_model</span> <span class="p">{</span>
@@ -899,7 +923,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     title: Forecast model run
     institution: Unidata
     source: WRF-1.5
-    history: 2023-06-13 12:08:47.917079 Python
+    history: 2023-11-15 19:20:03.587117 Python
     references: 
     comment: 
     dimensions(sizes): forecast_time(0), x(101), y(67), pressure(7)
@@ -1153,13 +1177,13 @@ filling on, default _FillValue of 9.969209968386869e+36 used
 <span class="n">lon_var</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">lon</span>
 <span class="n">lon_var</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_east&#39;</span>
 <span class="n">lon_var</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>  <span class="c1"># Optional</span>
-<span class="n">lon_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+<span class="n">lon_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;longitude coordinate&#39;</span>
 
 <span class="n">lat_var</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">))</span>
 <span class="n">lat_var</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">lat</span>
 <span class="n">lat_var</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_north&#39;</span>
 <span class="n">lat_var</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>  <span class="c1"># Optional</span>
-<span class="n">lat_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>
+<span class="n">lat_var</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;latitude coordinate&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1552,7 +1576,8 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
     </div>
   
     <div class="footer-item">
-    <div class="container-fluid footer-menu pt-4">
+    
+<div class="container-fluid footer-menu pt-4">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
@@ -1574,6 +1599,11 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
               >The Project Team</a
             >
           </li>
+          <li>
+            <a href="https://projectpythia.org/#how-to-cite"
+              >How to Cite</a
+            >
+          </li>
         </ul>
       </div>
       <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
@@ -1583,15 +1613,8 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
             <a href="mailto:projectpythia@ucar.edu">Email us!</a>
           </li>
           <li>
-            <a
-              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
-              >Project Pythia Discussions</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
-              >Pythia Foundations Discussions</a
+            <a href="https://discourse.pangeo.io/c/education/project-pythia/60s"
+              >Pangeo Discourse</a
             >
           </li>
         </ul>
@@ -1602,12 +1625,6 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
           <li>
             <a href="https://projectpythia.org/contributing.html"
               >How to contribute to Project Pythia</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
-              >How to contribute to Pythia Foundations</a
             >
           </li>
           <li>
@@ -1641,7 +1658,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 13 June 2023.
+          Last updated on 15 November 2023.
         </p>
       </div>
     </div>

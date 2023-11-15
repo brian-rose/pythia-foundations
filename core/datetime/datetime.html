@@ -137,6 +137,13 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
   </li>
   
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/blog.html">Blog</a>
+  </li>
+  
   
 </ul>
       </div>
@@ -198,6 +205,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../../preamble/how-to-use.html">
    How to Use This Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../preamble/how-to-cite.html">
+   How to Cite This Book
   </a>
  </li>
 </ul>
@@ -624,7 +636,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/datetime/datetime.ipynb"><button type="button"
+        <a class="binder-button" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/pythia-foundations/main?urlpath=lab/tree/core/datetime/datetime.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -943,7 +955,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1686658132.859946
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1700076004.7811937
 </pre></div>
 </div>
 </div>
@@ -964,7 +976,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.0012977123260498 seconds
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The benchmark took 1.0002384185791016 seconds
 </pre></div>
 </div>
 </div>
@@ -1093,7 +1105,7 @@ or see our <a href="https://foundations.projectpythia.org/appendix/how-to-contri
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5829
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5985
 </pre></div>
 </div>
 </div>
@@ -1165,8 +1177,8 @@ The type of the &#39;tide_length&#39; variable is &lt;class &#39;datetime.timede
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2023-06-13 12:08:53.932843.
-I am time zone aware 2023-06-13 12:08:53.932874+00:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive 2023-11-15 19:20:05.818640.
+I am time zone aware 2023-11-15 19:20:05.818667+00:00.
 </pre></div>
 </div>
 </div>
@@ -1189,8 +1201,8 @@ I am time zone aware 2023-06-13 12:08:53.932874+00:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2023-06-13 12:08:53.939434.
-I am time zone aware: 2023-06-13 06:08:53.952548-06:00.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>I am time zone naive: 2023-11-15 19:20:05.822979.
+I am time zone aware: 2023-11-15 12:20:05.833696-07:00.
 </pre></div>
 </div>
 </div>
@@ -1212,8 +1224,12 @@ I am time zone aware: 2023-06-13 06:08:53.952548-06:00.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is June 13, 2023, 12:08PM.
-The &#39;US/Mountain&#39; time is June 13, 2023, 6:08AM.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The UTC time is November 15, 2023, 7:20PM.
+The &#39;US/Mountain&#39; time is November 15, 2023, 12:20PM.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3661/3080495102.py:1: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  utc = dt.datetime.utcnow().replace(tzinfo=pytz.utc)
 </pre></div>
 </div>
 </div>
@@ -1319,7 +1335,8 @@ The &#39;US/Mountain&#39; time is June 13, 2023, 6:08AM.
     </div>
   
     <div class="footer-item">
-    <div class="container-fluid footer-menu pt-4">
+    
+<div class="container-fluid footer-menu pt-4">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
@@ -1341,6 +1358,11 @@ The &#39;US/Mountain&#39; time is June 13, 2023, 6:08AM.
               >The Project Team</a
             >
           </li>
+          <li>
+            <a href="https://projectpythia.org/#how-to-cite"
+              >How to Cite</a
+            >
+          </li>
         </ul>
       </div>
       <div class="col-9 col-sm-4 col-md-4 col-lg-3 footer-menu-col">
@@ -1350,15 +1372,8 @@ The &#39;US/Mountain&#39; time is June 13, 2023, 6:08AM.
             <a href="mailto:projectpythia@ucar.edu">Email us!</a>
           </li>
           <li>
-            <a
-              href="https://github.com/ProjectPythia/projectpythia.github.io/discussions"
-              >Project Pythia Discussions</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/ProjectPythia/pythia-foundations/discussions"
-              >Pythia Foundations Discussions</a
+            <a href="https://discourse.pangeo.io/c/education/project-pythia/60s"
+              >Pangeo Discourse</a
             >
           </li>
         </ul>
@@ -1369,12 +1384,6 @@ The &#39;US/Mountain&#39; time is June 13, 2023, 6:08AM.
           <li>
             <a href="https://projectpythia.org/contributing.html"
               >How to contribute to Project Pythia</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://foundations.projectpythia.org/appendix/how-to-contribute.html"
-              >How to contribute to Pythia Foundations</a
             >
           </li>
           <li>
@@ -1408,7 +1417,7 @@ The &#39;US/Mountain&#39; time is June 13, 2023, 6:08AM.
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 13 June 2023.
+          Last updated on 15 November 2023.
         </p>
       </div>
     </div>
