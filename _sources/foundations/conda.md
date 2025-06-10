@@ -31,16 +31,17 @@ Package management is useful because you may want to update a package for one of
 
 ## Installing Conda
 
-We recommend you install Miniconda. You can do that by following the [instructions for your machine](https://docs.conda.io/en/latest/miniconda.html).
+We recommend you install Miniforge. You can do that by following the [instructions for your machine](https://github.com/conda-forge/miniforge).
 
-Miniconda only comes with the `conda` package management system; it is a pared-down version of the full Anaconda Python distribution.
+Miniforge uses the `conda` package management system and is based on Miniconda, which is a pared-down version of the full Anaconda Python distribution.
 
 [Installing Anaconda](https://docs.anaconda.com/anaconda/install/) takes longer and uses up more disk space, but provides you with more functionality, including Spyder (a Python-specific integrated development environment or IDE) and Jupyter, in addition to other immediately installed packages. Also, the interface of Anaconda is great if you are uncomfortable with the terminal.
 
-We recommend Miniconda for two reasons:
+We recommend Miniforge for these reasons:
 
 1. It's quicker and takes up less disk space.
 2. It encourages you to install only the packages you need in reproducible isolated environments for specific projects. This is generally a more robust way to work with open source tools.
+3. It uses `conda-forge` as the default channel for packages, which is our recommended way to get up-to-date, interoperable packages..
 
 Once you have `conda` via the Miniconda installer, the next step is to create an environment and install packages.
 
@@ -110,7 +111,7 @@ conda env list
 conda env remove --name sample_environment
 ```
 
-You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf).
+You can find lots more information in the [Conda documentation](https://docs.conda.io/en/latest/) or this handy [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf).
 
 If you're not a command line user, the Anaconda navigator offers GUI functionality for selecting environments and installing packages.
 
@@ -129,6 +130,6 @@ Conda is a package and environment management system that allows you to quickly 
 
 - [Linux commands](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 - [Conda documentation](https://docs.conda.io/en/latest/)
-- [Conda cheat sheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+- [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 - [Anaconda](https://docs.anaconda.com/anaconda/install/)
 - [Miniconda](https://docs.conda.io/en/latest/miniconda.html)

@@ -56,7 +56,7 @@ That's the first thing to understand. GitHub is a web-based platform for hosting
 
 Git has been around [since the mid-2000s](https://en.wikipedia.org/wiki/Git). It was originally written by Linus Torvalds specifically for use in development of the Linux kernel. Git is [FOSS](https://foundations.projectpythia.org/foundations/github/what-is-github.html#free-and-open-source-software-foss) and comes pre-installed on many Linux and Mac OS systems.
 
-There are many other VCSs out there. A few that you might encounter in scientific codebases include [Subversion](https://subversion.apache.org), [Mercurial](https://www.mercurial-scm.org), and [CVS](http://cvs.nongnu.org). However, git is overwhelmingly the VCS of choice for open-source projects in the Scientific Python ecosystem these days (as well as among software developers more generally).
+There are many other VCSs out there. A few that you might encounter in scientific codebases include [Subversion](https://subversion.apache.org), [Mercurial](https://www.mercurial-scm.org), and [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System). However, git is overwhelmingly the VCS of choice for open-source projects in the Scientific Python ecosystem these days (as well as among software developers more generally).
 
 There is no universally agreed-upon meaning of the name "git". From the [git project's own README file](https://github.com/git/git/blob/master/README.md):
 
@@ -410,10 +410,34 @@ The `git diff` command is a powerful comparison tool (and maybe your second new 
 
 - `git status`: see what branch we're on and what state our repo is in.
 - `git checkout`: switch between branches (use the `-b` flag to create a new branch and check it out)
+
+```bash
+    git checkout -b new-branch-name
+    git checkout <unique-code-of-commit>
+    git checkout branch-name
+```
+
 - `git diff`: compare files between current version and last commit (default), between two commits, or between two branches.
+
+```bash
+    git diff commit-one commit-two
+    git diff branch-one..branch-two
+```
+
 - `git add`: stage a file for a commit.
+
+```bash
+    git add file-name
+```
+
 - `git commit`: create a new commit with the staged files.
+
+```bash
+    git commit -m 'message/comment between quotation marks'
+```
+
 - `git log`: see the commit history of our branch.
+  - Press `Q` to exit
 
 ### Some other git commands you'll want to know
 
